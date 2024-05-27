@@ -8,14 +8,15 @@ body{
     background-color: rgb(158, 239, 239);
 }
 
+ 
 /* .hide {
     display: none;
 
 } */
 
-.header {
+#header {
     background-color:rgb(95, 220, 97);
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     border-radius: 8px;
     color: azure;
