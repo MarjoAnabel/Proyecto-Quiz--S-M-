@@ -1,6 +1,6 @@
 // const apiUrl = 'https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple'
 const startbtn = document.getElementById('startbtn') //boton start
-const header = document.getElementById ('header') // encabezado
+ const header = document.getElementById ('header') // encabezado
 const main = document.getElementById('main')// pagina principal
 const apiQuestion = document.getElementById ('api-question') //donde se alojan las preguntas
 const questionElement = document.getElementById ('question')
