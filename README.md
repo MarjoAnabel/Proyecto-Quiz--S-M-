@@ -28,3 +28,10 @@ API para preguntas: Open Trivia Database (OpenTDB) u otras APIs adecuadas.
   }
 });
 
+ <div id="results-container" class="hidden">
+            <h2>Results</h2>
+            <div id="results"></div>
+            <button id="restart-button" class="button">RESET</button>
+        </div>
+        
+
