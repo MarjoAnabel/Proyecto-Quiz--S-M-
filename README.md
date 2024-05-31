@@ -15,17 +15,16 @@ Frontend: HTML, CSS, JavaScript, [Framework/Librería SPA (Ej: React, Vue.js, An
 API para preguntas: Open Trivia Database (OpenTDB) u otras APIs adecuadas.
 
 
-function showQuestion() {
-      const question = questions[currentQuestionIndex];
-      questionElement.textContent = question.question;
-      answersContainer.innerHTML = '';
-      const answers = [...question.incorrect_answers, question.correct_answer].sort(() => Math.random() - 0.5);
-      answers.forEach(answer => {
-          const button = document.createElement('button');
-          button.classList.add('button');
-          button.textContent = answer;
-          button.addEventListener('click', () => selectAnswer(answer, button, question.correct_answer));
-          answersContainer.appendChild(button);
+  function showResults() {
+      quizContainer.classList.add('hidden');
+      resultsContainer.classList.remove('hidden');
+      resultsElement.innerHTML = '';
+      userAnswers.forEach((item, index) => {
+          const div = document.createElement('div');
+          div.textContent = `${index + 1}. ${item.question} - Tu respuesta: ${item.answer} - Correcta: ${item.correctAnswer}`;
+          div.classList.add(item.answer === item.correctAnswer ? 'correct' : 'incorrect');
+          resultsElement.appendChild(div);
       });
-      nextButton.classList.add('hidden');
   }
+});
+
