@@ -5,24 +5,148 @@
 }
 
 body{
-    background-color: rgb(158, 239, 239);
+    background-color: rgb(212, 234, 252);
+    font-family: sans-serif;
 }
 
- 
-/* .hide {
+/*Títulos principales*/
+h1 {
+    font-weight: bold;
+    color: #eae6ca;
+    font-size: 5 rem; 
+}
+
+
+h2 {
+    font-size:8 rem;
+    font-family:cursive;
+}
+
+
+/*Modo oculto*/
+.hide {
     display: none;
+}
 
-} */
 
+/* Cabecera */
 #header {
-    background-color:rgb(95, 220, 97);
+    background-color: rgb(130, 187, 243);
     display: flex;
     justify-content: center;
-    border-radius: 8px;
-    color: azure;
+    padding: 30px;
+    border-radius: 7px;
 }
 
+
+/* Página pricipal  */
 .container {
-    /* display: flex; */
-    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
 }
+
+
+/* Div donde estan alojadas las preguntas y los botones de respuestas */
+#question, #answer-buttons{
+   display: flex;
+   justify-content: center;
+   
+}
+
+#question {
+    font-size: 24px;
+    margin-bottom: 20px;
+ 
+}
+
+#answer-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+
+}
+
+#api-question {
+ justify-content: center;
+ margin-top: 10%;
+
+}
+/* Botones de siguiente pregunta e inicio del juego  */
+#next-btn {
+    margin-top: 20px;
+    padding: 15px;
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 10px;
+
+}
+
+
+#startbtn {
+    font-size: 30px;
+    width: 50%;
+    margin-top: 5%;
+    padding: 10px;
+    background-color: rgb(99, 144, 240);
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+
+}
+
+.btn-primary {
+    width: 20%;
+    padding: 20px;
+    background-color: #35A6FF;
+    font-size: 30px;
+}
+
+/*Imagen de la pantalla principal*/
+img {
+    margin-top: 50px;
+    width: 55%;
+}
+
+
+/* Cambios de propiedades cuando se activa los botones */
+#answer-buttons button:active {
+    transform: scale(0.85);
+    transition: 0.5s;
+   
+}
+
+#next-btn:active {
+    transform: scale(0.85);
+    transition: 0.5s;
+}
+
+#startbtn:active {
+    transform: scale(0.85);
+    transition: 0.5s;
+}
+
+#startbtn:hover{
+    background-color: rgb(246, 199, 247);
+
+}
+
+.summary-list, li{
+    margin-top:10px;
+    padding-left: 8px;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Color de fondo para las respuestas correctas e incorrectas */
+.color-correct {
+    background-color: #3e6461;
+    color:white
+}
+
+.color-wrong {
+    background-color:#c43e1d;
+    color:white
+}
+
