@@ -13,3 +13,19 @@ Resultados detallados: Al finalizar, muestra un resumen de respuestas correctas 
 Tecnologías Utilizadas
 Frontend: HTML, CSS, JavaScript, [Framework/Librería SPA (Ej: React, Vue.js, Angular)].
 API para preguntas: Open Trivia Database (OpenTDB) u otras APIs adecuadas.
+
+
+function showQuestion() {
+      const question = questions[currentQuestionIndex];
+      questionElement.textContent = question.question;
+      answersContainer.innerHTML = '';
+      const answers = [...question.incorrect_answers, question.correct_answer].sort(() => Math.random() - 0.5);
+      answers.forEach(answer => {
+          const button = document.createElement('button');
+          button.classList.add('button');
+          button.textContent = answer;
+          button.addEventListener('click', () => selectAnswer(answer, button, question.correct_answer));
+          answersContainer.appendChild(button);
+      });
+      nextButton.classList.add('hidden');
+  }
