@@ -15,23 +15,10 @@ Frontend: HTML, CSS, JavaScript, [Framework/Librería SPA (Ej: React, Vue.js, An
 API para preguntas: Open Trivia Database (OpenTDB) u otras APIs adecuadas.
 
 
-  function showResults() {
-      quizContainer.classList.add('hidden');
-      resultsContainer.classList.remove('hidden');
-      resultsElement.innerHTML = '';
-      userAnswers.forEach((item, index) => {
-          const div = document.createElement('div');
-          div.textContent = `${index + 1}. ${item.question} - Tu respuesta: ${item.answer} - Correcta: ${item.correctAnswer}`;
-          div.classList.add(item.answer === item.correctAnswer ? 'correct' : 'incorrect');
-          resultsElement.appendChild(div);
-      });
-  }
-});
+ 
 
- <div id="results-container" class="hidden">
-            <h2>Results</h2>
-            <div id="results"></div>
-            <button id="restart-button" class="button">RESET</button>
-        </div>
-        
+          const resultsContainer = document.getElementById('results-container');
+  const resultsElement = document.getElementById('results');
+  const restartButton = document.getElementById('restart-button');
+  
 
